@@ -98,6 +98,22 @@ def main():
                                         "You dont seem to have any contacts saved yet")
                                     print('\n')
 
+                    elif short_code == 'dd':
+                            if del_contact():
+                                    print("Contact deleted")
+                                    print('\n')
+
+                                    for contact in delete_contact():
+                                            print(
+                                                f"{contact.first_name} {contact.last_name} .....{contact.phone_number}")
+
+                                    print('\n')
+                            else:
+                                    print('\n')
+                                    print(
+                                        "You dont seem to have any contacts saved yet")
+                                    print('\n')
+
                     elif short_code == 'fc':
 
                             print("Enter the number you want to search for")

@@ -1,4 +1,5 @@
 import pyperclip
+import random
 
 
 class Contact:
@@ -15,6 +16,21 @@ class Contact:
 
     def delete_contact(self):
         Contact.contact_list.remove(self)
+
+    def generate_Password(self):
+        print('''
+        Password Generator
+        ==================
+        ''')
+        chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@£$%^&*().,?0123456789'
+        length = 9
+
+        print('\nhere are your passwords:')
+        password = ''
+        for c in range(0, length):
+            password += random.choice(chars)
+        print(password)
+        # pass
 
     @classmethod
     def find_by_number(cls, number):
