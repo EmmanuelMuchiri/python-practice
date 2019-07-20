@@ -73,11 +73,8 @@ def delete_contacts():
     """
     return Contact.delete_contacts()
 
-
 ## Copy Email ##
 #**********************#
-
-
 @classmethod
 def copy_email(cls, number):
     """
@@ -86,6 +83,22 @@ def copy_email(cls, number):
     """
     contact_found = Contact.find_by_number(number)
     pyperclip.copy(contact_found.email)
+    
+@classmethod
+def generate_Password():
+    print('''
+    Password Generator
+    ==================
+    ''')
+    chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@£$%^&*().,?0123456789'
+    length = 9
+    print('\nhere are your passwords:')
+    password = ''
+    for c in range(0, length):
+        password += random.choice(chars)
+    print(password)
+    return Contact.generate_Password()
+
 
 
 def main():
@@ -97,7 +110,7 @@ def main():
 
     while True:
                     print(
-                        "Use these short codes : cc - create a new contact, dc - display contacts, fc -find a contact, ex -exit the contact list , del -delete contact, del-A -Delete all")
+                        "Use these short codes : cc - create a new contact, dc - display contacts, fc -find a contact, ex -exit the contact list , del -delete contact, pwd -generate password")
 
                     short_code = input().lower()
 
