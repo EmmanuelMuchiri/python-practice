@@ -1,4 +1,4 @@
-import pyperclip
+import pyperclip,random
 
 
 class Contact:
@@ -91,3 +91,17 @@ class Contact:
         method that returns the contact list
         '''
         return cls.contact_list
+    @classmethod
+    def generate_Password(self):
+        print('''
+        Password Generator
+        ==================
+        ''')
+        chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@£$%^&*().,?0123456789'
+        length = 9
+        print('\nhere are your passwords:')
+        password = ''
+        for c in range(0, length):
+            password += random.choice(chars)
+        print(password)
+        return contact_list.generate_Password()
