@@ -20,12 +20,14 @@
 # print(testOne)
 import random
 
-def generate_Password(self):
-    
+
+def generate_Password():
+
     print('''
     Password Generator
     ==================
     ''')
+
 
 chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@£$%^&*().,?0123456789'
 
@@ -38,4 +40,4 @@ for c in range(0, length):
 print(password)
 pass
 
-generate_Password(self)
+generate_Password()
