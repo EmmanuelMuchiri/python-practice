@@ -109,7 +109,7 @@ class TestContact(unittest.TestCase):
             "Test", "user", "0712345678", "test@user.com")  # new contact
         test_contact.save_contact()
 
-        self.new_contact.delete_contact()  # Deleting a contact object
+        self.new_contact.generate_Password()  # Deleting a contact object
         self.assertEqual(len(Contact.contact_list), 1)
 
 
